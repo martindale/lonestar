@@ -1,13 +1,56 @@
 extends layouts/default
 
+block page
+  script(src="/js/index.js")
+
 block content
+  .ui.inverted.vertical.masthead.center.aligned.segment
+    .ui.container
+      .ui.large.secondary.inverted.pointing.menu
+        a(class="toc item")
+          i(class="sidebar icon")
+        a(class="active item") Home
+        a(class="item") Work
+        a(class="item") Company
+        a(class="item") Careers
+        .right.item
+          a(class="ui inverted button") Log in
+          a(class="ui inverted button") Sign Up
+    .ui.text.container
+      img(src="/images/logo.png", width="400px")
+      h1(class="ui inverted header") LONE STAR FPV
+
+  .ui.vertical.stripe.segment
+    .ui.middle.aligned.stackable.grid.container
+      .row
+        .eight.wide.column
+          h3(class="ui header") We do awesome engineering
+          p Hailing from industry leaders, we use our world class engineering and testing skills to develop systems with the highest standards.
+          h3(class="ui header") Everything is bigger in Texas
+          p I need some copy, and something about Texas seems appropriate.
+        .six.wide.right.floated.column
+          img(src="/images/labview.jpg", class="ui large bordered rounded image")
+      .row
+        .center.aligned.column
+          a(class="ui huge button") Call to Action
+
+  .ui.vertical.stripe.segment
+    .ui.text.containe
+      h3(class="ui header") Breaking The Grid, Grabs Your Attention
+      p Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.
+      a(class="ui large button") Read More
+      h4(class="ui horizontal header divider")
+        a(href="#") Case Studies
+      h3(class="ui header") Did We Tell You About Our Bananas?
+      p Yes I know you probably disregarded the earlier boasts as non-sequitor filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.
+      a(class="ui large button") I'm Still Quite Interested
+
   .ui.fluid.column
     .ui.grid
       .row
         .column
           if (user)
             include forms/post-create
-
       .row
         .column
           .ui.posts

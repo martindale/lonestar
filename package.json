@@ -1,7 +1,7 @@
 {
-  "name": "melody",
+  "name": "lone_star",
   "version": "0.0.0",
-  "description": "simple publishing platform",
+  "description": "advanced data publishing platform",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
@@ -9,25 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/martindale/melody.git"
+    "url": "https://github.com/fractaloop/lone_star.git"
   },
   "keywords": [
-    "maki",
-    "publish",
-    "blog",
-    "microblog",
-    "content",
-    "cms",
-    "broadcast",
-    "semantic",
-    "rest"
+    "drone",
+    "fpv",
+    "racing",
+    "test",
+    "blog"
   ],
-  "author": "Eric Martindale",
+  "author": "Logan Lowell",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/martindale/melody/issues"
+    "url": "https://github.com/fractaloop/lone_star/issues"
   },
-  "homepage": "https://github.com/martindale/melody",
+  "homepage": "https://github.com/fractaloop/lone_star",
   "dependencies": {
     "maki": "git://github.com/martindale/maki",
     "maki-auth-simple": "0.0.1",

@@ -1,1 +1,1 @@
-module.exports = require('./lib/melody');
+module.exports = require('./lib/lone_star');

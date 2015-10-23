@@ -1,0 +1,4 @@
+a.ui.card(href="/powerplants/#{powerplant.slug}")
+  .content
+    .header #{powerplant._motor.make} #{powerplant._motor.model} with a #{powerplant._propeller.make} #{powerplant._propeller.model}
+    .meta joined #{moment(powerplant.created).fromNow()}

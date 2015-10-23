@@ -1,6 +1,6 @@
 module.exports = {
   service: {
-    name: 'melody',
-    icon: 'music'
+    name: 'lone_star',
+    icon: 'plane'
   }
 };

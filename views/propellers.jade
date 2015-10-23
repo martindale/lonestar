@@ -1,0 +1,31 @@
+extends layouts/default
+
+block content
+  .ui.text.container
+    h1(class="ui dividing header") Propellers
+    for propeller in propellers
+      include partials/propeller
+
+    h2(class="ui dividing header") Add a new Propeller
+    .ui.segment
+      form.ui.form(action="/propellers", method="post")
+        .field
+          label Make
+          input(type="text", name="make")
+        .field
+          label Model
+          input(type="text", name="model")
+        .field
+          label Length (inches)
+          input(type="number", name="length", step="0.1")
+        .field
+          label Pitch
+          input(type="number", name="pitch", step="0.1")
+        .field
+          label Composition
+          input(type="text", name="composition")
+
+        button.ui.right.floated.primary.submit.button Register
+          i.icon.right.chevron
+
+      br(style="clear:both;")

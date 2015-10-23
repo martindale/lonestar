@@ -1,0 +1,25 @@
+extends layouts/default
+
+block content
+  .ui.text.container
+    h1(class="ui dividing header") Motors
+    for motor in motors
+      include partials/motor
+
+    h2(class="ui dividing header") Add a new Motor
+    .ui.segment
+      form.ui.form(action="/motors", method="post")
+        .field
+          label Make
+          input(type="text", name="make")
+        .field
+          label Model
+          input(type="text", name="model")
+        .field
+          label kV
+          input(type="numeric", name="kv")
+
+        button.ui.right.floated.primary.submit.button Register
+          i.icon.right.chevron
+
+      br(style="clear:both;")
