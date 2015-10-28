@@ -2,9 +2,12 @@ extends layouts/default
 
 block content
   .ui.text.container
-    h1(class="ui dividing header") Propellers
-    for propeller in propellers
-      include partials/propeller
+    .ui.tabular.menu
+      a.item(href="/motors") Motors
+      a.item.active(href="/propellers") Props
+      a.item(href="/powertrains") Powertrains
+      a.item(href="/measurements") Measurements
+
 
     h2(class="ui dividing header") Add a new Propeller
     .ui.segment
@@ -28,4 +31,7 @@ block content
         button.ui.right.floated.primary.submit.button Register
           i.icon.right.chevron
 
-      br(style="clear:both;")
+    for propeller in propellers
+      include partials/propeller
+
+    br(style="clear:both;")

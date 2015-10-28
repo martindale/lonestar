@@ -2,6 +2,12 @@ extends layouts/default
 
 block content
   .ui.text.container
+    .ui.tabular.menu
+      a.item.active(href="/motors") Motors
+      a.item(href="/propellers") Props
+      a.item(href="/powertrains") Powertrains
+      a.item(href="/measurements") Measurements
+
     h1(class="ui dividing header") Motors
     for motor in motors
       include partials/motor
