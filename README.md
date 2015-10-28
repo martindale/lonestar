@@ -1,2 +1,3 @@
-# blog.soundtrack.io
-Simple blog for the soundtrack.io website.
+# Lone Star
+
+A Maki application to drive the website for [Lone Star FPV](https://www.lonestarfpv.com)
