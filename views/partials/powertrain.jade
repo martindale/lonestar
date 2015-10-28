@@ -1,0 +1,4 @@
+a.ui.card(href="/powertrains/#{powertrain._id}")
+  .content
+    .header #{powertrain._motor.make} #{powertrain._motor.model} with a #{powertrain._propeller.make} #{powertrain._propeller.model}
+    .meta joined #{moment(powertrain.created).fromNow()}

@@ -1,0 +1,29 @@
+extends layouts/default
+
+block content
+
+  .ui.text.container
+    .ui.tabular.menu
+      a.item(href="/motors") Motors
+      a.item(href="/propellers") Props
+      a.item.active(href="/powertrains") Powertrains
+      a.item(href="/measurements") Measurements
+
+    form.ui.form(action="/powertrains", method="post")
+      .field
+        label Motor
+        select(name="_motor")
+          for motor in motors
+            option(value=motor._id) #{motor.make} #{motor.model} (#{motor.kv})
+      .field
+        label Propeller
+        select(name="_propeller")
+          for prop in propellers
+            option(value=prop._id) #{prop.make} #{prop.model} #{prop.length}x#{prop.pitch}
+      button.ui.right.floated.primary.submit.button Create
+        i.icon.right.chevron
+
+    for powertrain in powertrains
+      include partials/powertrain
+
+    br(style="clear:both;")
